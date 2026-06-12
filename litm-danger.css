@@ -23,9 +23,7 @@
     font-size: 1.3em !important;
 
 }
-.callout[data-callout="litm-danger"].callout-content *:last-of-type {
-	margin-bottom: 0;
-}
+
 
 .callout[data-callout="litm-danger"] .callout-content {
 	margin-bottom: -0.3em;
@@ -34,12 +32,15 @@
     padding: 3px 15px !important;
 }
 
+.callout[data-callout="litm-danger"].callout-content *:last-of-type {
+	margin-bottom: 0;
+}
 .callout[data-callout="litm-danger"] .callout-fold {
 	display: none;
 	margin-right: auto;
 	margin-left: -110px;
 }
-/* .callout[data-callout="litm-danger"] .callout-icon { */
+.callout[data-callout="litm-danger"] .callout-icon {
     display: none;
 } 
 .callout[data-callout="litm-danger"] .callout-title .callout-title-inner {
