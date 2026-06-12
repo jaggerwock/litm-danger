@@ -1,0 +1,216 @@
+
+/* Ensure content stays above the overlay */
+.callout > * {
+    position: relative;
+    z-index: 1;
+}
+/* Base callout: litm-danger */
+.callout[data-callout="litm-danger"] {
+  --callout-color: 200, 200, 200; /* light neutral border */
+  --callout-border-width: 1px;
+  --callout-radius: 12px;
+  background-color: rgba(243, 240, 235, 1);
+  border: 1px solid rgba(var(--callout-color), 0.5);
+  border-radius: var(--callout-radius);
+  padding: 12px;
+  color: #000000;
+  text-align: center;
+  
+}
+
+.callout[data-callout="litm-danger"] .callout-title {
+    font-family: "Copperplate", "Garamond", "Georgia" !important;
+    font-size: 1.3em !important;
+
+}
+
+
+.callout[data-callout="litm-danger"] .callout-content {
+	margin-bottom: -0.3em;
+	    font-family: "Georgia", "Garamond" !important;
+    font-size: 1em !important;
+    padding: 3px 15px !important;
+}
+
+.callout[data-callout="litm-danger"] .callout-fold {
+	display: none;
+	margin-right: auto;
+	margin-left: -110px;
+}
+/* .callout[data-callout="litm-danger"] .callout-icon { */
+    display: none;
+} 
+.callout[data-callout="litm-danger"] .callout-title .callout-title-inner {
+	
+	color: rgba(79, 49, 29, 1);
+	text-transform: uppercase;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: bolder;
+}
+
+.callout[data-callout="litm-danger"] hr {
+	border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(133, 107, 91, .75), rgba(133, 107, 91, 0.0), rgba(133, 107, 91, 0)); 
+	margin: 1.2em 0 0.8em 0;
+}
+
+.callout[data-callout="litm-danger"] em {
+	color: #6b5a3a;
+	font-weight: bold;
+}
+/* Nested callouts base style */
+.callout[data-callout="litm-danger"] .callout {
+	background-color: transparent;
+	border: none;
+	padding: 4px 0;
+}
+
+/* LIMITS → red highlight, black text */
+.callout[data-callout="limits"] {
+  --text-normal: #000000;
+  padding-top: 0px;
+}
+.callout[data-callout="limits"] mark {
+  background-color: rgba(209, 161, 141, 1);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000000;
+}
+.callout[data-callout="limits"] .callout-title .callout-title-inner {
+	
+color: rgba(133, 107, 91, 1);
+text-transform: uppercase;
+margin-left: 1rem;
+margin-right: 1rem;
+}
+.callout[data-callout="limits"]> ::after {
+  content: '';
+  flex: auto;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #856b5b;
+}
+.callout[data-callout="limits"]> ::before {
+  content: '';
+  flex: auto;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #856b5b;
+  
+}
+/* TAGS → green highlight, black text */
+.callout[data-callout="tags"] {
+  --text-normal: #000000;
+}
+.callout[data-callout="tags"]> ::after {
+  content: '';
+  flex: auto;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #856b5b;
+}
+.callout[data-callout="tags"]> ::before {
+  content: '';
+  flex: auto;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #856b5b;
+}
+.callout[data-callout="tags"] mark {
+  background-color: rgba(239, 214, 147, 1);
+  color: #000000;
+  font-style: italic;
+}
+.callout[data-callout="tags"] .callout-title .callout-title-inner {
+
+color: rgba(133, 107, 91, 1);
+text-transform: uppercase;
+margin-left: 1rem;
+margin-right: 1rem;
+}
+.callout[data-callout="tags"] .callout-content {
+	padding-top: 0.1px; /* prevents margin collapse */
+	
+}
+
+.callout[data-callout="tags"] em {
+  background-color: rgba(188, 205, 176, 1);
+  color: #000000;
+  font-weight: normal;
+}
+
+/* MOVES*/
+
+.callout[data-callout="moves"] .callout-title .callout-title-inner {
+
+	color: rgba(133, 107, 91, 1);
+	text-transform: uppercase;
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.callout[data-callout="moves"]> ::after {
+	content: '';
+	flex: auto;
+	margin-left: 1rem;
+	margin-top: 1rem;
+	border-top: 1px solid #856b5b;
+}
+.callout[data-callout="moves"]> ::before {
+	content: '';
+	flex: auto;
+	margin-left: 1rem;
+	margin-top: 1rem;
+	border-top: 1px solid #856b5b;
+}
+.callout[data-callout="moves"] ul {
+	margin-top: 0.2em;
+	margin-bottom: 0.8em;
+	padding-left: 1.2em; /* optional for alignment */
+}
+.callout[data-callout="moves"] mark {
+	background-color: rgba(239, 214, 147, 1);
+	color: #000000;
+	font-style: italic;
+}
+.callout[data-callout="moves"] .callout-content {
+	padding-top: 0.1px; /* prevents margin collapse */
+}
+
+.callout[data-callout="moves"] .callout-title {
+	padding-bottom: 0.2em;
+}
+
+.callout[data-callout="moves"] em {
+	background-color: rgba(188, 205, 176, 1);
+	color: #000000;
+	font-weight: normal;
+}
+.callout[data-callout="moves"] del {
+	
+  background-color: rgba(209, 161, 141, 1);
+  color: #000000;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.callout[data-callout="moves"] h3 {
+	font-size: 1em;
+	text-align: start;
+	margin-top: 0.8em;
+	margin-bottom: 0.3em;
+	
+}
+.callout[data-callout="moves"] h3 mark {
+	background-color: #cfbfb4;
+	font-style: normal;
+	font-size : 1em;
+	padding-left : 0.5em;
+	padding-right : 0.5em;
+}
+
+.callout[data-callout="moves"] h3:first-of-type {
+	margin-top: 0.0em;
+}
