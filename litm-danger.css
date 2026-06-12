@@ -23,7 +23,9 @@
     font-size: 1.3em !important;
 
 }
-
+.callout[data-callout="litm-danger"].callout-content *:last-of-type {
+	margin-bottom: 0;
+}
 
 .callout[data-callout="litm-danger"] .callout-content {
 	margin-bottom: -0.3em;
