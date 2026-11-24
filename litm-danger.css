@@ -24,7 +24,6 @@
 
 }
 
-
 .callout[data-callout="litm-danger"] .callout-content {
 	margin-bottom: -0.3em;
 	    font-family: "Georgia", "Garamond" !important;
@@ -52,168 +51,191 @@
 	font-weight: bolder;
 }
 
+
+/*====================================== Change Default Highlight Colors ======================================*/
+.callout[data-callout="litm-danger"] mark[data-highlight="yellow"] {
+  background-color: rgba(239,214,147,1);
+  color: #000000;
+}
+.callout[data-callout="litm-danger"] mark[data-highlight="red"] {
+  background-color: rgba(209, 161, 141,1);
+  color: #000000;
+}
+.callout[data-callout="litm-danger"] mark[data-highlight="green"] {
+  background-color: rgba(188, 205, 176,1);
+  color: #000000;
+}
+.callout[data-callout="litm-danger"] mark[data-highlight="purple"] {
+  background-color: rgba(207, 191, 180,1);
+  color: #000000;
+  padding-left : 0.5em;
+  padding-right : 0.5em;
+}
+/* ====================================== Change Titles to sections ======================================*/
+
+.callout[data-callout="litm-danger"] h2 {
+	display: flex;
+	align-items: center;
+	font-family:"Garamond";
+	color: rgba(133, 107, 91, 1);
+	text-transform: uppercase;
+	margin-left: 0rem;
+	margin-right: 0rem;
+	font-size : 1.3em;
+	font-style: normal;
+}
+.callout[data-callout="litm-danger"] .markdown-rendered h2::before,
+.callout[data-callout="litm-danger"] .markdown-rendered h2::after {
+  content: '';
+  flex: auto;
+  margin: 0 1rem;
+  border-top: 1px solid #856b5b;
+}
+
+.callout[data-callout="litm-danger"] h3 {
+	font-size: 1em;
+	text-align: start;
+	margin-top: 0.8em;
+	margin-bottom: 0.3em;
+	margin-left: 1rem;
+	
+}
+
+.callout[data-callout="litm-danger"] h4 {
+	color: #6b5a3a;
+	font-weight: bold;
+	font-size : 1em;
+}
+
+
 .callout[data-callout="litm-danger"] hr {
 	border: 0;
     height: 1px;
     background-image: -webkit-linear-gradient(left, rgba(133, 107, 91, .75), rgba(133, 107, 91, 0.0), rgba(133, 107, 91, 0)); 
 	margin: 1.2em 0 0.8em 0;
+	margin-left: 1rem;
 }
 
-.callout[data-callout="litm-danger"] em {
-	color: #6b5a3a;
-	font-weight: bold;
-}
-/* Nested callouts base style */
-.callout[data-callout="litm-danger"] .callout {
-	background-color: transparent;
-	border: none;
-	padding: 4px 0;
+/* ====================================== Sub Section ======================================*/
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-section"] {
+  --callout-color: 133, 107, 91;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0.4em 0;
 }
 
-/* LIMITS → red highlight, black text */
-.callout[data-callout="limits"] {
-  --text-normal: #000000;
-  padding-top: 0px;
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-section"] > .callout-title {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  font-family: "Garamond" !important;
+  font-size: 1.3em !important;
+
 }
-.callout[data-callout="limits"] mark {
-  background-color: rgba(209, 161, 141, 1);
-  font-weight: bold;
+
+/* Lines before and after the title */
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-section"] > .callout-title::before,
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-section"] > .callout-title::after {
+  content: '';
+  flex: auto;
+  margin: 0 1rem;
+  border-top: 1px solid #856b5b;
+}
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-section"] > .callout-title .callout-title-inner {
+  flex: none;
+  margin: 0;
+  color: rgba(133, 107, 91, 1);
   text-transform: uppercase;
-  color: #000000;
+  font-weight: bold;
 }
-.callout[data-callout="limits"] .callout-title .callout-title-inner {
-	
-color: rgba(133, 107, 91, 1);
-text-transform: uppercase;
-margin-left: 1rem;
-margin-right: 1rem;
+
+/* Your outer rules hide these, so bring back the arrow only */
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-section"] > .callout-title .callout-fold {
+  display: none;
+  margin: 0;
+  color: rgba(133, 107, 91, 1);
 }
-.callout[data-callout="limits"]> ::after {
-  content: '';
-  flex: auto;
-  margin-left: 1rem;
-  margin-top: 1rem;
-  border-top: 1px solid #856b5b;
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-section"] > .callout-title .callout-icon {
+  display: none;
 }
-.callout[data-callout="limits"]> ::before {
-  content: '';
-  flex: auto;
-  margin-left: 1rem;
-  margin-top: 1rem;
-  border-top: 1px solid #856b5b;
+
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-section"] > .callout-content {
+  padding: 0 !important;
+  margin-bottom: 0;
+}
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-section"] .callout-icon {
+    display: none;
+} 
+.markdown-rendered .heading-collapse-indicator {
+  color: #856b5b;
+}
+/*========================================================== COLLUMNS =======================================================*/
+/* Invisible wrapper: no box, no title */
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-columns"] {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0.8em 0 0;
+}
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-columns"] > .callout-title {
+  display: none;
+}
+
+/* The grid */
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-columns"] > .callout-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 1fr;
+  column-gap: 1.5rem;
+  padding: 0 !important;
+  margin: 0;
+}
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-columns"] > .callout-content > .callout {
+  margin: 0;
+  align-self: start;
+}
+
+/* Left column: sections 1 and 2 */
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-columns"] > .callout-content > .callout:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-columns"] > .callout-content > .callout:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Right column: section 3 spans both rows */
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-columns"] > .callout-content > .callout:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  text-align: left;
+  padding-left: 1em;
+}
+
+/* Single column on narrow screens */
+@media (max-width: 600px) {
+  .callout[data-callout="litm-danger"] .callout[data-callout="litm-columns"] > .callout-content {
+    display: block;
+  }
+}
+/* Vertical separator: left border of the right-hand section */
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-columns"] > .callout-content > .callout:nth-child(3) {
+  border-left: 2px solid transparent;
+  box-shadow: none;
+  border-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1) 20%,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(255, 255, 255, 0)
+  ) 1;
+}
   
-}
-/* TAGS → green highlight, black text */
-.callout[data-callout="tags"] {
-  --text-normal: #000000;
-}
-.callout[data-callout="tags"]> ::after {
-  content: '';
-  flex: auto;
-  margin-left: 1rem;
-  margin-top: 1rem;
-  border-top: 1px solid #856b5b;
-}
-.callout[data-callout="tags"]> ::before {
-  content: '';
-  flex: auto;
-  margin-left: 1rem;
-  margin-top: 1rem;
-  border-top: 1px solid #856b5b;
-}
-.callout[data-callout="tags"] mark {
-  background-color: rgba(239, 214, 147, 1);
-  color: #000000;
-  font-style: italic;
-}
-.callout[data-callout="tags"] .callout-title .callout-title-inner {
-
-color: rgba(133, 107, 91, 1);
-text-transform: uppercase;
-margin-left: 1rem;
-margin-right: 1rem;
-}
-.callout[data-callout="tags"] .callout-content {
-	padding-top: 0.1px; /* prevents margin collapse */
-	
-}
-
-.callout[data-callout="tags"] em {
-  background-color: rgba(188, 205, 176, 1);
-  color: #000000;
-  font-weight: normal;
-}
-
-/* MOVES*/
-
-.callout[data-callout="moves"] .callout-title .callout-title-inner {
-
-	color: rgba(133, 107, 91, 1);
-	text-transform: uppercase;
-	margin-left: 1em;
-	margin-right: 1em;
-}
-
-.callout[data-callout="moves"]> ::after {
-	content: '';
-	flex: auto;
-	margin-left: 1rem;
-	margin-top: 1rem;
-	border-top: 1px solid #856b5b;
-}
-.callout[data-callout="moves"]> ::before {
-	content: '';
-	flex: auto;
-	margin-left: 1rem;
-	margin-top: 1rem;
-	border-top: 1px solid #856b5b;
-}
-.callout[data-callout="moves"] ul {
-	margin-top: 0.2em;
-	margin-bottom: 0.8em;
-	padding-left: 1.2em; /* optional for alignment */
-}
-.callout[data-callout="moves"] mark {
-	background-color: rgba(239, 214, 147, 1);
-	color: #000000;
-	font-style: italic;
-}
-.callout[data-callout="moves"] .callout-content {
-	padding-top: 0.1px; /* prevents margin collapse */
-}
-
-.callout[data-callout="moves"] .callout-title {
-	padding-bottom: 0.2em;
-}
-
-.callout[data-callout="moves"] em {
-	background-color: rgba(188, 205, 176, 1);
-	color: #000000;
-	font-weight: normal;
-}
-.callout[data-callout="moves"] del {
-	
-  background-color: rgba(209, 161, 141, 1);
-  color: #000000;
-  text-decoration: none;
-  font-style: italic;
-}
-
-.callout[data-callout="moves"] h3 {
-	font-size: 1em;
-	text-align: start;
-	margin-top: 0.8em;
-	margin-bottom: 0.3em;
-	
-}
-.callout[data-callout="moves"] h3 mark {
-	background-color: #cfbfb4;
-	font-style: normal;
-	font-size : 1em;
-	padding-left : 0.5em;
-	padding-right : 0.5em;
-}
-
-.callout[data-callout="moves"] h3:first-of-type {
-	margin-top: 0.0em;
+/* Right column: no line before the title, so the title starts at the left edge */
+.callout[data-callout="litm-danger"] .callout[data-callout="litm-columns"] > .callout-content > .callout:nth-child(3) > .callout-title::before {
+  display: none;
 }
