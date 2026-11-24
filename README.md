@@ -1,3 +1,7 @@
+== INSTALL ==
+1. Download litm-danger.css and place it inside [YOUR VAULT]\.obsidian\snippets
+2. Activate it in Display/css Snippet
+
 == HOW TO USE ==
 - Create a callout using [!litm-danger]
 - Inside it #### (h4) will create a subtitle
