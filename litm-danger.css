@@ -84,8 +84,8 @@
 	font-size : 1.3em;
 	font-style: normal;
 }
-.callout[data-callout="litm-danger"] .markdown-rendered h2::before,
-.callout[data-callout="litm-danger"] .markdown-rendered h2::after {
+.callout[data-callout="litm-danger"] h2::before,
+.callout[data-callout="litm-danger"] h2::after {
   content: '';
   flex: auto;
   margin: 0 1rem;
